@@ -45,6 +45,7 @@ public class MainController {
             @AuthenticationPrincipal User user,
             @RequestParam String text,
             @RequestParam String tag, Map<String, Object> model) {
+
         Message message = new Message(text, tag, user);
 
         messageRepo.save(message);
